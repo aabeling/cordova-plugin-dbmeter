@@ -31,6 +31,18 @@
     <source-file src="src/ios/DBMeter.swift" />
   </platform>
 
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="DBMeter">
+        <param name="browser-package" value="DBMeter" />
+      </feature>
+    </config-file>
+
+    <js-module src="src/browser/DBMeterProxy.js" name="DBMeterProxy">
+      <runs />
+    </js-module>
+  </platform>
+
   <js-module src="dbmeter.js" name="DBMeter">
     <clobbers target="DBMeter" />
   </js-module>
